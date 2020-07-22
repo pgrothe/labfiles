@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: k8s-plex-media
+  labels:
+    type: "nfs"
+spec:
+  storageClassName: "Synology"
+  capacity:
+    storage: "20Ti"
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 172.16.15.11
+    path: "/volume1/k8s-plex-media"

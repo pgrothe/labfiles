@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-k8s-plex-config
+spec:
+  capacity:
+    storage: 30Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  claimRef:
+    namespace: plex
+    name: pvc-k8s-plex-config
+  nfs:
+    server: 172.16.15.11
+    path: "/volume1/k8s-plex-config"

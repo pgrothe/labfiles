@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: scott.evil-admin-CRB
+subjects:
+- kind: User
+  name: scott.evil@virtucon.local # AD User Name
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin # must match the name of a Role or ClusterRole to bind to
+  apiGroup: rbac.authorization.k8s.io

@@ -1,0 +1,28 @@
+kubectl create -f pvc-k8s-plex-transcode.yaml -n plex
+kubectl describe pvc -n plex
+kubectl delete pvc pvc-k8s-plex-transcode -n plex
+
+kubectl create -f pv-k8s-plex-transcode.yaml
+kubectl describe pv pv-k8s-plex-transcode
+kubectl delete pv pv-k8s-plex-transcode
+
+
+
+kubectl create -f pvc-k8s-plex-data.yaml -n plex
+kubectl describe pvc -n plex
+kubectl delete pvc pvc-k8s-plex-data -n plex
+
+kubectl create -f pv-k8s-plex-data.yaml
+kubectl describe pv pv-k8s-plex-data
+kubectl delete pv pv-k8s-plex-data
+
+
+
+
+kubectl create -f pvc-k8s-plex-config.yaml -n plex
+kubectl describe pvc -n plex
+kubectl delete pvc pvc-k8s-plex-config -n plex
+
+kubectl create -f pv-k8s-plex-config.yaml
+kubectl describe pv pv-k8s-plex-config
+kubectl delete pv pv-k8s-plex-config

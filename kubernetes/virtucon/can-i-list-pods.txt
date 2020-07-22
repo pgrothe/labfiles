@@ -1,0 +1,7 @@
+kubectl auth can-i list pods
+kubectl auth can-i list pods --as alice@virtucon.local
+kubectl auth can-i --list --as alice@virtucon.local
+kubectl auth can-i --list --as dave@virtucon.local
+kubectl auth can-i --list --as dr.evil@virtucon.local
+kubectl auth can-i --list --as scott.evil@virtucon.local
+kubectl auth can-i --list --as pierre@grothe.ca
